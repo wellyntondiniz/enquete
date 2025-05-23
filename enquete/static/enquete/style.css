@@ -1,0 +1,29 @@
+header{
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    width: 100%;
+    padding: 5px;
+}
+#titulo{
+    color: blueviolet;
+}
+.itens{
+    color: green;
+}
+footer{
+    background-color: grey;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+#conteudo{
+    text-align: center;
+    padding: 10px;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

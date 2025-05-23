@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'enquete.apps.EnqueteConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
