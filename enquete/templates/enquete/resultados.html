@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-
     {% load static %}
-
-<html>
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <title>Sistema de enquetes capricho</title>
@@ -11,14 +9,20 @@
     </head>
     <header>
         <img width="20px" src="{% static 'enquete/Logo_Estrela.png' %}">
-        Sistema de enquetes capricho 
+        Sistema de enquetes capricho
     </header>
     <body>
-        <div id="conteudo">
-            {% for questao in questoes  %}
-                <li><a href="{% url 'enquete:votar' questao.id %}">{{ questao.descricao }}</a> </li>
+    <div>
+        <ul>
+            {% for option in question.alternativa_set.all %}
+                <li>{{ option.descricao }} -- {{ option.votos }}</li>
             {% endfor %}
-        </div>
+        </ul>
+
+        <a href="{% url 'enquete:votar' question.id %}">Votar novamente?</a>
+        <a href="{% url 'enquete:index' %}">Ver outras questões?</a>
+    </div>
+
     </body>
     <footer>
         @Todos os direitos reservados - Capricho - Engenharia de Computação
